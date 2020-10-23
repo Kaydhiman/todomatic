@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
 export default function Todo(props) {
-
   const [ isEditing, setEditing ] = useState(false);
-
   const [ newName, setName ] = useState('');
 
   const handleChange = e => {
@@ -12,7 +10,6 @@ export default function Todo(props) {
 
   const handleSubmit = e => {
     e.preventDefault();
-
     props.editTask(props.id, newName);
     setName('');
     setEditing(false);
